@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-k8s
+spec:
+  selector:
+    matchLabels:
+      app: flask-k8s
+  template:
+    metadata:
+      labels:
+        app: flask-k8s
+    spec:
+      containers:
+      - name: flask-k8s
+        image: <Image>
+        ports:
+        - containerPort: 5003
+      type: LoadBalancer
