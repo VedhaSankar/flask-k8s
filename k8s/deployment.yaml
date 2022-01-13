@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: flask-k8s
-        image: <Image>
+        image: flask-k8s
         ports:
         - containerPort: 5003
-      type: LoadBalancer
+        imagePullPolicy: IfNotPresent
